@@ -129,6 +129,38 @@ cursor:pointer;
 background:#00aaff;
 }
 
+.marcas{
+display:flex;
+flex-wrap:wrap;
+gap:10px;
+justify-content:center;
+}
+
+.marcas button{
+display:flex;
+align-items:center;
+gap:8px;
+background:#132b4a;
+border:1px solid #1e4b80;
+color:white;
+padding:10px 16px;
+border-radius:20px;
+cursor:pointer;
+font-size:14px;
+transition:0.2s;
+}
+
+.marcas button img{
+width:18px;
+height:18px;
+}
+
+.marcas button:hover{
+background:#00aaff;
+border-color:#00aaff;
+transform:scale(1.05);
+}
+
 </style>
 </head>
 
@@ -210,11 +242,53 @@ O desbloqueio é de inteira responsabilidade do técnico contratante.<br>
 
 <div class="marcas">
 
-<button onclick="filtrarMarca('todas')">Todas</button>
-<button onclick="filtrarMarca('samsung')">Samsung</button>
-<button onclick="filtrarMarca('motorola')">Motorola</button>
-<button onclick="filtrarMarca('xiaomi')">Xiaomi</button>
-<button onclick="filtrarMarca('realme')">Realme</button>
+<div class="marcas">
+
+<button onclick="filtrarMarca('todas')">
+🌐 Todas
+</button>
+
+<button onclick="filtrarMarca('samsung')">
+<img src="https://cdn.simpleicons.org/samsung/ffffff">
+Samsung
+</button>
+
+<button onclick="filtrarMarca('motorola')">
+<img src="https://cdn.simpleicons.org/motorola/ffffff">
+Motorola
+</button>
+
+<button onclick="filtrarMarca('xiaomi')">
+<img src="https://cdn.simpleicons.org/xiaomi/ffffff">
+Xiaomi
+</button>
+
+<button onclick="filtrarMarca('realme')">
+<img src="https://cdn.simpleicons.org/realme/ffffff">
+Realme
+</button>
+
+<button onclick="filtrarMarca('nokia')">
+<img src="https://cdn.simpleicons.org/nokia/ffffff">
+Nokia
+</button>
+
+<button onclick="filtrarMarca('lg')">
+<img src="https://cdn.simpleicons.org/lg/ffffff">
+LG
+</button>
+
+</div>
+
+<button onclick="filtrarMarca('xiaomi')">
+<img src="https://cdn-icons-png.flaticon.com/512/5969/5969046.png">
+Xiaomi
+</button>
+
+<button onclick="filtrarMarca('realme')">
+<img src="https://cdn-icons-png.flaticon.com/512/888/888879.png">
+Realme
+</button>
 
 </div>
 
@@ -227,7 +301,7 @@ O desbloqueio é de inteira responsabilidade do técnico contratante.<br>
 
 <table>
 
-<tr class="Samsung">
+<tr class="samsung">
 <td class="modelo">🟢 Galaxy J1</td>
 <td class="preco">$10</td>
 </tr>
