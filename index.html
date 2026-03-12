@@ -113,20 +113,35 @@ font-size:16px;
 .marcas{
 display:flex;
 flex-wrap:wrap;
-gap:10px;
+justify-content:center;
+gap:12px;
 }
 
 .marcas button{
-background:#1a3b66;
-border:none;
+display:flex;
+align-items:center;
+justify-content:center;
+gap:6px;
+min-width:120px;
+background:#132b4a;
+border:1px solid #1e4b80;
 color:white;
-padding:10px 15px;
-border-radius:6px;
+padding:10px 14px;
+border-radius:25px;
 cursor:pointer;
+font-size:14px;
+transition:0.2s;
+}
+
+.marcas button img{
+width:18px;
+height:18px;
+object-fit:contain;
 }
 
 .marcas button:hover{
 background:#00aaff;
+border-color:#00aaff;
 }
 
 .marcas{
@@ -165,48 +180,42 @@ transform:scale(1.05);
 </head>
 
 <script>
-
-function filtrarModelo(){
-
-let input = document.getElementById("buscarModelo");
-let filtro = input.value.toLowerCase();
-
-let linhas = document.querySelectorAll("table tr");
-
-linhas.forEach(function(linha){
-
-let texto = linha.innerText.toLowerCase();
-
-if(texto.includes(filtro)){
-linha.style.display = "";
-}else{
-linha.style.display = "none";
-}
-
-});
-
-}
-
 function filtrarMarca(marca){
 
-let linhas = document.querySelectorAll("table tr");
+let tabelas = document.querySelectorAll(".tabela");
+
+tabelas.forEach(function(tabela){
+
+let linhas = tabela.querySelectorAll("tr");
+let encontrou = false;
 
 linhas.forEach(function(linha){
 
 if(marca === "todas"){
 linha.style.display = "";
+encontrou = true;
 return;
 }
 
 if(linha.classList.contains(marca)){
 linha.style.display = "";
+encontrou = true;
 }else{
 linha.style.display = "none";
 }
 
 });
 
+if(encontrou){
+tabela.style.display = "block";
+}else{
+tabela.style.display = "none";
 }
+
+});
+
+}
+
 
 </script>
 
@@ -264,7 +273,7 @@ Xiaomi
 </button>
 
 <button onclick="filtrarMarca('realme')">
-<img src="https://cdn.simpleicons.org/realme/ffffff">
+<img src="https://cdn.simpleicons.org/realme">
 Realme
 </button>
 
