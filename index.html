@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Mateus Soft - Desbloqueio Samsung</title>
+
+<style>
+
+body{
+font-family: Arial;
+background:#0b1e35;
+color:white;
+margin:0;
+}
+
+header{
+text-align:center;
+padding:20px;
+background:#061428;
+}
+
+header img{
+width:180px;
+}
+
+h1{
+margin:10px 0;
+}
+
+.container{
+padding:15px;
+}
+
+.aviso{
+background:#122c4f;
+padding:15px;
+border-radius:8px;
+margin-bottom:20px;
+}
+
+.tabela{
+background:#0f2744;
+border-radius:10px;
+overflow:hidden;
+}
+
+.tabela h2{
+background:#071a30;
+padding:10px;
+margin:0;
+}
+
+table{
+width:100%;
+border-collapse:collapse;
+}
+
+td{
+padding:10px;
+border-bottom:1px solid #1c3a5f;
+}
+
+.modelo{
+font-weight:bold;
+}
+
+.preco{
+text-align:right;
+color:#00e1ff;
+}
+
+.status{
+font-size:14px;
+}
+
+.whatsapp{
+display:block;
+text-align:center;
+background:#25d366;
+padding:15px;
+margin:20px;
+border-radius:10px;
+text-decoration:none;
+color:white;
+font-size:18px;
+font-weight:bold;
+}
+
+footer{
+text-align:center;
+padding:20px;
+font-size:14px;
+color:#aaa;
+}
+
+
+
+.filtros{
+margin-bottom:20px;
+}
+
+#buscarModelo{
+width:100%;
+padding:12px;
+border-radius:8px;
+border:none;
+margin-bottom:10px;
+font-size:16px;
+}
+
+.marcas{
+display:flex;
+flex-wrap:wrap;
+gap:10px;
+}
+
+.marcas button{
+background:#1a3b66;
+border:none;
+color:white;
+padding:10px 15px;
+border-radius:6px;
+cursor:pointer;
+}
+
+.marcas button:hover{
+background:#00aaff;
+}
+
+</style>
+</head>
+
+<script>
+
+function filtrarModelo(){
+
+let input = document.getElementById("buscarModelo");
+let filtro = input.value.toLowerCase();
+
+let linhas = document.querySelectorAll("table tr");
+
+linhas.forEach(function(linha){
+
+let texto = linha.innerText.toLowerCase();
+
+if(texto.includes(filtro)){
+linha.style.display = "";
+}else{
+linha.style.display = "none";
+}
+
+});
+
+}
+
+function filtrarMarca(marca){
+
+let linhas = document.querySelectorAll("table tr");
+
+linhas.forEach(function(linha){
+
+if(marca === "todas"){
+linha.style.display = "";
+return;
+}
+
+if(linha.classList.contains(marca)){
+linha.style.display = "";
+}else{
+linha.style.display = "none";
+}
+
+});
+
+}
+
+</script>
+
+<body>
+
+<header>
+
+<img src="logo.jpeg">
+
+<h1>MATEUS SOFT</h1>
+<p>Desbloqueio Samsung</p>
+
+</header>
+
+<div class="container">
+
+<div class="aviso">
+
+⚠️ <b>VALORES EXCLUSIVOS PARA TÉCNICOS</b><br><br>
+
+O desbloqueio é de inteira responsabilidade do técnico contratante.<br>
+É realizada verificação de IMEI antes do procedimento.<br><br>
+
+🟢 Não precisa abrir<br>
+🟡 Precisa abrir aparelho<br>
+🔴 Análise técnica
+
+</div>
+
+<div class="filtros">
+
+<input type="text" id="buscarModelo" placeholder="🔎 Digite o modelo..." onkeyup="filtrarModelo()">
+
+<div class="marcas">
+
+<button onclick="filtrarMarca('todas')">Todas</button>
+<button onclick="filtrarMarca('samsung')">Samsung</button>
+<button onclick="filtrarMarca('motorola')">Motorola</button>
+<button onclick="filtrarMarca('xiaomi')">Xiaomi</button>
+<button onclick="filtrarMarca('realme')">Realme</button>
+
+</div>
+
+</div>
+
+
+<div class="tabela">
+
+<h2>Linha Galaxy J</h2>
+
+<table>
+
+<tr>
+<td class="modelo">🟢 Galaxy J1</td>
+<td class="preco">$10</td>
+</tr>
+
+<tr>
+<td class="modelo">🟢 Galaxy J2</td>
+<td class="preco">$10</td>
+</tr>
+
+<tr>
+<td class="modelo">🟢 Galaxy J2 Core</td>
+<td class="preco">$10</td>
+</tr>
+
+<tr>
+<td class="modelo">🟢 Galaxy J3</td>
+<td class="preco">$10</td>
+</tr>
+
+<tr>
+<td class="modelo">🟢 Galaxy J4</td>
+<td class="preco">$10</td>
+</tr>
+
+<tr>
+<td class="modelo">🟢 Galaxy J5</td>
+<td class="preco">$10</td>
+</tr>
+
+<tr>
+<td class="modelo">🟢 Galaxy J6</td>
+<td class="preco">$10</td>
+</tr>
+
+<tr>
+<td class="modelo">🟢 Galaxy J7</td>
+<td class="preco">$10</td>
+</tr>
+
+<tr>
+<td class="modelo">🟢 Galaxy J8</td>
+<td class="preco">$10</td>
+</tr>
+
+</table>
+
+</div>
+
+
+
+<div class="tabela">
+
+<h2>Linha Galaxy Core</h2>
+
+<table>
+
+<tr>
+<td class="modelo">🟢 Galaxy A02 Core</td>
+<td class="preco">$10</td>
+</tr>
+
+<tr>
+<td class="modelo">🟢 Galaxy A03 Core</td>
+<td class="preco">$10</td>
+</tr>
+
+</table>
+
+</div>
+
+
+
+<div class="tabela">
+
+<h2>Linha Galaxy A</h2>
+
+<table>
+
+<tr>
+<td class="modelo">🟡 Galaxy A01 (Fechado)</td>
+<td class="preco">$15</td>
+</tr>
+
+<tr>
+<td class="modelo">🟡 Galaxy A01 (Aberto)</td>
+<td class="preco">$10</td>
+</tr>
+
+<tr>
+<td class="modelo">🟢 Galaxy A02</td>
+<td class="preco">$10</td>
+</tr>
+
+<tr>
+<td class="modelo">🟡 Galaxy A03s (Fechado)</td>
+<td class="preco">$30</td>
+</tr>
+
+<tr>
+<td class="modelo">🟡 Galaxy A03s (Aberto)</td>
+<td class="preco">$20</td>
+</tr>
+
+<tr>
+<td class="modelo">🟢 Galaxy A05</td>
+<td class="preco">$30</td>
+</tr>
+
+<tr>
+<td class="modelo">🟢 Galaxy A10</td>
+<td class="preco">$10</td>
+</tr>
+
+<tr>
+<td class="modelo">🟢 Galaxy A10s</td>
+<td class="preco">$10</td>
+</tr>
+
+</table>
+
+</div>
+
+
+
+<a class="whatsapp" href="https://wa.me/5591SEUNUMERO">
+
+FALAR NO WHATSAPP
+
+</a>
+
+</div>
+
+
+<footer>
+
+Mateus Soft Assistência Técnica
+
+</footer>
+
+
+</body>
+</html>
