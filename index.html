@@ -180,42 +180,26 @@ transform:scale(1.05);
 </head>
 
 <script>
-function filtrarMarca(marca){
+function filtrarModelo(){
 
-let tabelas = document.querySelectorAll(".tabela");
+let input = document.getElementById("buscarModelo");
+let filtro = input.value.toLowerCase();
 
-tabelas.forEach(function(tabela){
-
-let linhas = tabela.querySelectorAll("tr");
-let encontrou = false;
+let linhas = document.querySelectorAll("table tr");
 
 linhas.forEach(function(linha){
 
-if(marca === "todas"){
-linha.style.display = "";
-encontrou = true;
-return;
-}
+let texto = linha.innerText.toLowerCase();
 
-if(linha.classList.contains(marca)){
+if(texto.includes(filtro)){
 linha.style.display = "";
-encontrou = true;
 }else{
 linha.style.display = "none";
 }
 
 });
 
-if(encontrou){
-tabela.style.display = "block";
-}else{
-tabela.style.display = "none";
 }
-
-});
-
-}
-
 
 </script>
 
@@ -316,42 +300,42 @@ Realme
 <td class="preco">$10</td>
 </tr>
 
-<tr>
+<tr class="samsung">
 <td class="modelo">🟢 Galaxy J2</td>
 <td class="preco">$10</td>
 </tr>
 
-<tr>
+<tr class="samsung">
 <td class="modelo">🟢 Galaxy J2 Core</td>
 <td class="preco">$10</td>
 </tr>
 
-<tr>
+<tr class="samsung">
 <td class="modelo">🟢 Galaxy J3</td>
 <td class="preco">$10</td>
 </tr>
 
-<tr>
+<tr class="samsung">
 <td class="modelo">🟢 Galaxy J4</td>
 <td class="preco">$10</td>
 </tr>
 
-<tr>
+<tr class="samsung">
 <td class="modelo">🟢 Galaxy J5</td>
 <td class="preco">$10</td>
 </tr>
 
-<tr>
+<tr class="samsung">
 <td class="modelo">🟢 Galaxy J6</td>
 <td class="preco">$10</td>
 </tr>
 
-<tr>
+<tr class="samsung">
 <td class="modelo">🟢 Galaxy J7</td>
 <td class="preco">$10</td>
 </tr>
 
-<tr>
+<tr class="samsung">
 <td class="modelo">🟢 Galaxy J8</td>
 <td class="preco">$10</td>
 </tr>
@@ -368,12 +352,12 @@ Realme
 
 <table>
 
-<tr>
+<tr class="samsung">
 <td class="modelo">🟢 Galaxy A02 Core</td>
 <td class="preco">$10</td>
 </tr>
 
-<tr>
+<tr class="samsung">
 <td class="modelo">🟢 Galaxy A03 Core</td>
 <td class="preco">$10</td>
 </tr>
@@ -390,47 +374,206 @@ Realme
 
 <table>
 
-<tr>
+<tr class="samsung">
 <td class="modelo">🟡 Galaxy A01 (Fechado)</td>
 <td class="preco">$15</td>
 </tr>
 
-<tr>
+<tr class="samsung">
 <td class="modelo">🟡 Galaxy A01 (Aberto)</td>
 <td class="preco">$10</td>
 </tr>
 
-<tr>
+<tr class="samsung">
 <td class="modelo">🟢 Galaxy A02</td>
 <td class="preco">$10</td>
 </tr>
 
-<tr>
+<tr class="samsung">
 <td class="modelo">🟡 Galaxy A03s (Fechado)</td>
 <td class="preco">$30</td>
 </tr>
 
-<tr>
+<tr class="samsung">
 <td class="modelo">🟡 Galaxy A03s (Aberto)</td>
 <td class="preco">$20</td>
 </tr>
 
-<tr>
+<tr class="samsung">
 <td class="modelo">🟢 Galaxy A05</td>
 <td class="preco">$30</td>
 </tr>
 
-<tr>
+<tr class="samsung">
 <td class="modelo">🟢 Galaxy A10</td>
 <td class="preco">$10</td>
 </tr>
 
-<tr>
+<tr class="samsung">
 <td class="modelo">🟢 Galaxy A10s</td>
 <td class="preco">$10</td>
 </tr>
 
+<tr class="samsung">
+<td class="modelo">🟢 Galaxy A20</td>
+<td class="preco">$10</td>
+</tr>
+
+
+<tr class="samsung">
+<td class="modelo">🟡 Galaxy A20s (Fechado)</td>
+<td class="preco">$25</td>
+</tr>
+
+<tr class="samsung">
+<td class="modelo">🟡 Galaxy a20s (Aberto)</td>
+<td class="preco">$15</td>
+</tr>
+
+<tr class="samsung">
+<td class="modelo">🟡 Galaxy A22 (Fechado)</td>
+<td class="preco">$30</td>
+</tr>
+
+<tr class="samsung">
+<td class="modelo">🟡 Galaxy A22 (Aberto)</td>
+<td class="preco">$20</td>
+</tr>
+
+<tr class="samsung">
+<td class="modelo">🟡 Galaxy A23 (Fechado)</td>
+<td class="preco">$30</td>
+</tr>
+
+<tr class="samsung">
+<td class="modelo">🟡 Galaxy A23 (Aberto)</td>
+<td class="preco">$20</td>
+</tr>
+
+<tr class="samsung">
+<td class="modelo">🟢 Galaxy A30</td>
+<td class="preco">$20</td>
+</tr>
+
+<tr class="samsung">
+<td class="modelo">🟡 Galaxy A30s (Fechado)</td>
+<td class="preco">$30</td>
+</tr>
+
+<tr class="samsung">
+<td class="modelo">🟡 Galaxy A30s (Aberto)</td>
+<td class="preco">$20</td>
+</tr>
+
+<tr class="samsung">
+<td class="modelo">🟡 Galaxy A31 (Fechado)</td>
+<td class="preco">$30</td>
+</tr>
+
+<tr class="samsung">
+<td class="modelo">🟡 Galaxy A31 (Aberto)</td>
+<td class="preco">$20</td>
+</tr>
+
+<tr class="samsung">
+<td class="modelo">🟡 Galaxy A32 (Fechado)</td>
+<td class="preco">$30</td>
+</tr>
+
+<tr class="samsung">
+<td class="modelo">🟡 Galaxy A32 (Aberto)</td>
+<td class="preco">$20</td>
+</tr>
+
+<tr class="samsung">
+<td class="modelo">🟡 Galaxy A50 (Fechado)</td>
+<td class="preco">$30</td>
+</tr>
+
+<tr class="samsung">
+<td class="modelo">🟡 Galaxy A50 (Aberto)</td>
+<td class="preco">$20</td>
+</tr>
+
+<tr class="samsung">
+<td class="modelo">🟡 Galaxy A70 (Fechado)</td>
+<td class="preco">$30</td>
+</tr>
+
+<tr class="samsung">
+<td class="modelo">🟡 Galaxy A70 (Aberto)</td>
+<td class="preco">$20</td>
+</tr>
+
+<tr class="samsung">
+<td class="modelo">🟡 Galaxy A71 (Fechado)</td>
+<td class="preco">$30</td>
+</tr>
+
+<tr class="samsung">
+<td class="modelo">🟡 Galaxy A71 (Aberto)</td>
+<td class="preco">$20</td>
+</tr>
+
 </table>
+
+
+
+<h2>Android 16 - Valor Único</h2>
+
+<table>
+
+<tr class="samsung"><td class="modelo">🟢 Galaxy A06 (4G / 5G)</td><td class="preco">$30</td></tr>
+<tr class="samsung"><td class="modelo">🟢 Galaxy A07</td><td class="preco">$30</td></tr>
+<tr class="samsung"><td class="modelo">🟢 Galaxy A15 (4G / 5G)</td><td class="preco">$30</td></tr>
+<tr class="samsung"><td class="modelo">🟢 Galaxy A16 (4G / 5G)</td><td class="preco">$30</td></tr>
+<tr class="samsung"><td class="modelo">🟢 Galaxy A17 (4G / 5G)</td><td class="preco">$30</td></tr>
+<tr class="samsung"><td class="modelo">🟢 Galaxy A24</td><td class="preco">$30</td></tr>
+<tr class="samsung"><td class="modelo">🟢 Galaxy A25</td><td class="preco">$30</td></tr>
+<tr class="samsung"><td class="modelo">🟢 Galaxy A26</td><td class="preco">$30</td></tr>
+<tr class="samsung"><td class="modelo">🟢 Galaxy A33</td><td class="preco">$30</td></tr>
+<tr class="samsung"><td class="modelo">🟢 Galaxy A34</td><td class="preco">$30</td></tr>
+<tr class="samsung"><td class="modelo">🟢 Galaxy A35</td><td class="preco">$30</td></tr>
+<tr class="samsung"><td class="modelo">🟢 Galaxy A36</td><td class="preco">$30</td></tr>
+<tr class="samsung"><td class="modelo">🟢 Galaxy A53</td><td class="preco">$30</td></tr>
+<tr class="samsung"><td class="modelo">🟢 Galaxy A54</td><td class="preco">$30</td></tr>
+<tr class="samsung"><td class="modelo">🟢 Galaxy A55</td><td class="preco">$30</td></tr>
+<tr class="samsung"><td class="modelo">🟢 Galaxy A56</td><td class="preco">$30</td></tr>
+<tr class="samsung"><td class="modelo">🟢 Galaxy A73</td><td class="preco">$30</td></tr>
+
+<tr class="samsung"><td class="modelo">🟢 Galaxy S22</td><td class="preco">$30</td></tr>
+<tr class="samsung"><td class="modelo">🟢 Galaxy S22+</td><td class="preco">$30</td></tr>
+<tr class="samsung"><td class="modelo">🟢 Galaxy S22 Ultra</td><td class="preco">$30</td></tr>
+<tr class="samsung"><td class="modelo">🟢 Galaxy S23</td><td class="preco">$30</td></tr>
+<tr class="samsung"><td class="modelo">🟢 Galaxy S23+</td><td class="preco">$30</td></tr>
+<tr class="samsung"><td class="modelo">🟢 Galaxy S23 Ultra</td><td class="preco">$30</td></tr>
+<tr class="samsung"><td class="modelo">🟢 Galaxy S23 FE</td><td class="preco">$30</td></tr>
+<tr class="samsung"><td class="modelo">🟢 Galaxy S24</td><td class="preco">$30</td></tr>
+<tr class="samsung"><td class="modelo">🟢 Galaxy S24+</td><td class="preco">$30</td></tr>
+<tr class="samsung"><td class="modelo">🟢 Galaxy S24 Ultra</td><td class="preco">$30</td></tr>
+<tr class="samsung"><td class="modelo">🟢 Galaxy S24 FE</td><td class="preco">$30</td></tr>
+
+</table>
+
+
+
+<h2>Análise Técnica</h2>
+
+<table>
+
+<tr class="samsung"><td class="modelo">🔴 Galaxy A13</td><td class="preco">Análise</td></tr>
+<tr class="samsung"><td class="modelo">🔴 Galaxy A14</td><td class="preco">Análise</td></tr>
+<tr class="samsung"><td class="modelo">🔴 Galaxy A12 5G</td><td class="preco">Análise</td></tr>
+<tr class="samsung"><td class="modelo">🔴 Galaxy A21s</td><td class="preco">Análise</td></tr>
+<tr class="samsung"><td class="modelo">🔴 Galaxy A51</td><td class="preco">Análise</td></tr>
+<tr class="samsung"><td class="modelo">🔴 Galaxy A06</td><td class="preco">Análise</td></tr>
+<tr class="samsung"><td class="modelo">🔴 Galaxy A06 5G</td><td class="preco">Análise</td></tr>
+<tr class="samsung"><td class="modelo">🔴 Galaxy A04</td><td class="preco">Análise</td></tr>
+<tr class="samsung"><td class="modelo">🔴 Galaxy A04s</td><td class="preco">Análise</td></tr>
+<tr class="samsung"><td class="modelo">🔴 Galaxy A04e</td><td class="preco">Análise</td></tr>
+
+</table>
+
 
 </div>
 
